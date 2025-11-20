@@ -1,5 +1,8 @@
+# CREATED BY Laczi Péter - R9SAAO
+
 from dataclasses import dataclass
 import math
+
 
 @dataclass
 class LPShape:
@@ -40,16 +43,22 @@ class LPShape:
             color=d.get("color", "#6cb6ff")
         )
 
+
 def lp_draw_shape(canvas, shape: LPShape):
     canvas.create_polygon(
-        shape.polygon(), outline=shape.color, width=3, fill="", tags=("active",)
+        shape.polygon(), outline=shape.color, width=7, fill="", tags=("active",)
     )
-    canvas.create_oval(shape.cx-2, shape.cy-2, shape.cx+2, shape.cy+2,
-                       fill=shape.color, outline="", tags=("active",))
+    canvas.create_oval(
+        shape.cx-2, shape.cy-2, shape.cx+2, shape.cy+2,
+        fill=shape.color, outline="", tags=("active",)
+    )
+
 
 def lp_draw_ghost_shape(canvas, shape: LPShape):
     canvas.create_polygon(
-        shape.polygon(), outline="#3fb950", width=2, dash=(4, 4), fill="", tags=("ghost",)
+        shape.polygon(), outline="#3fb950", width=5, dash=(4, 4), fill="", tags=("ghost",)
     )
-    canvas.create_oval(shape.cx-2, shape.cy-2, shape.cx+2, shape.cy+2,
-                       fill="#3fb950", outline="", tags=("ghost",))
+    canvas.create_oval(
+        shape.cx-2, shape.cy-2, shape.cx+2, shape.cy+2,
+        fill="#3fb950", outline="", tags=("ghost",)
+    )

@@ -1,3 +1,5 @@
+# CREATED BY Laczi Péter - R9SAAO
+
 import time
 from dataclasses import dataclass, field
 from typing import List
