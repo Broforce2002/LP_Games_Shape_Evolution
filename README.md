@@ -138,7 +138,7 @@ python main.py
 
 ---
 
-## 📊 Statisztikák
+## Statisztikák
 A játék nyomon követi:
 - szintek idejét,
 - próbálkozások számát,
